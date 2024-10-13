@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image tag</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: #00ffff;
+        }
+    </style>
+    
+</head>
+<body>
+
+ <img src="display.jpg" width="500px" alt="no image"> <!-- to use width and height we have to know about ratio of height and width -->
+ <img src="./display.jpg" width="400px" alt="no image"> <!-- to use width and height we have to know about ratio of height and width -->
+ <picture>
+    <source media="(min-width:500px)" srcset="./display.jpg"/> <!--this is self closing element -->
+    <source media="(min-width:400px)" srcset=" " alt="no building image"/> <!--this is self closing element -->
+    <img src="./displa.jpg" width="300" alt="building image"><!--it done heirchy wise if first property is correct then first image load -->
+  
+ </picture>
+<!-- an image map generator -->
+<img src="./display.jpg"  width="350" alt="no image">
+
+<map name="image-map">
+    <area onclick="one()" shape="rect" coords="290,44,354,104" href="" alt="">
+    <area onclick="two()" shape="rect" coords="32,68,107,103" href="" alt="">
+</map><!-- home work to read it-->
+
+<script>
+    function one(){
+        alert("you clicked on one")
+    }
+    function two(){
+        alert("you clicked on two")
+    }
+</script>
+
+
+</body>
+</html>
